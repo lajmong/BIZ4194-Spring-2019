@@ -54,3 +54,14 @@ Ran two separate tests where the output variable is the same(Global_sales) and i
 * Process
 
 Ran three separte tests with different criteria of Global_sales being a 'success' and 'failure'. First was the median value, 0.29 the other two were random numbers 1.0 and 1.5. The plot was drawn with Critic_score in the x-axis and User_score in the y-axis.
+
+
+#### Conclusion
+1. Naive bayesian <br>
+Accuracy in NA, JP, EU's valid data has decreased. We concluded that JP_sales accuracy is low because most of the values were recorded 0. However we could not figure out why the accuracy level of NA and EU sales were low. There wasn't a meaningful insight with this method so in conclusion naive bayesian was not an appropriate algorithm for the following data set. <br>
+2. Neural Net <br>
+In the first run, accuracy came out as 0.8235 which is better than the Naive bayesian result. There was no overfitting issue and as we have anticipated, user and critic scores have an influence on sales. The second run's accuracy came out to be 0.8346, a high score as well. However we cannot conclude that this is out of pure luck or can be used as a meaningful predictor for it may simply be showing the video game trend. <br>
+3. k-NN <br>
+Accuracy was respectively 0.5968, 0.8272, 0.9168 when the criteria was 0.29(median), 1.0, and 1.5. The difference of sales when successful and failed was significantly drawn in the plot when the criteria was 1.5. 'Successful' video games had high user and critic score but there wasn't a clear correlation between the two scores for 'failed' video games. The result came out different from what we anticipated, user scores would have more impact than critic scores in global sales.<br>
+4. Limitation <br>
+With the sales value in millions, several values that were under millions were recorded as 0. (Nearly half of JP_sales were recorded 0)
